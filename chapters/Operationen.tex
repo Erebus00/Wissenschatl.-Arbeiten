@@ -2,7 +2,7 @@
 
 \section{Suchen}
 
-Um einen Schl\"ussel innerhalb eines B-Baums zu suchen geht man folgenderma\ss{}en vor. Ausgehend von der Wurzel werden alle Knoten danach \"uberpr\"uft, ob sich der Schl\"ussel in dem betrachteten Knoten befindet. Wird er nicht in der Wurzel gefunden wird der kleinste Schl\"ussel, der gr\"o\ss{}er als der gesuchte Schl\"ussel ist bestimmt. Sofern dieser Schl\"ussel existiert, wird bei dem Kindknoten links von diesem weitergesucht. Wenn die Suche am Ende bei einer null-Referenz landet existiert der Schl\"ussel nicht, oder er wurde nicht gefunden.
+Um einen Schl\"ussel innerhalb eines B-Baums zu suchen geht man folgenderma\ss en vor. Ausgehend von der Wurzel werden alle Knoten danach \"uberpr\"uft, ob sich der Schl\"ussel in dem betrachteten Knoten befindet. Wird er nicht in der Wurzel gefunden wird der kleinste Schl\"ussel, der gr\"o\ss er als der gesuchte Schl\"ussel ist bestimmt. Sofern dieser Schl\"ussel existiert, wird bei dem Kindknoten links von diesem weitergesucht. Wenn die Suche am Ende bei einer null-Referenz landet existiert der Schl\"ussel nicht, oder er wurde nicht gefunden. 
 \\[0.5in]
 \begin{figure}[h!] %[hbtp]
 	\centering
@@ -28,11 +28,11 @@ Wir f\"ugen in (siehe Abb. \ref{Beispiel_Suche_B-Baum})  den Schl\"ussel 14 ein.
 \end{figure}
 \\[0.3in]
 \paragraph{Fall 2:}
-Es wurden bereits $m-1$ Schl\"ussel in dem Knoten gespeichert, zudem der Schl\"ussel $x$ geh\"oren w\"urde. Der Schl\"ussel wird daher zuerst in den betreffenden Knoten seiner Gr\"o\ss{}e nach eingef\"ugt und der zu gro\ss{}e Knoten in der Mitte geteilt. Der mittlere Knoten wandert in seinen Vaterknoten und ordnet sich dort seiner Gr\"o\ss{}e nach ein. Die Zeiger auf die Kindknoten passen sich der neuen Anordnung an.
+Es wurden bereits $m-1$ Schl\"ussel in dem Knoten gespeichert, zudem der Schl\"ussel $x$ geh\"oren w\"urde. Der Schl\"ussel wird daher zuerst in den betreffenden Knoten seiner Gr\"o\ss e nach eingef\"ugt und der zu gro\ss e Knoten in der Mitte geteilt. Der mittlere Knoten wandert in seinen Vaterknoten und ordnet sich dort seiner Gr\"o\ss e nach ein. Die Zeiger auf die Kindknoten passen sich der neuen Anordnung an.
 \newline
 Ein Beispiel:
 \newline
-In die vorherige Abbildung (siehe Abb. \ref{insert_01}) wird der neue Schl\"ussel $24$ eingef\"ugt. Daher der Knoten zu gro\ss{} wird, teilt er sich und der Schl\"ussel $19$ wandert in den Vaterknoten. Danach bilden sich 2 neue Knoten aus dem zu gross{}en Knoten.(siehe Abb. \ref{insert_02})
+In die vorherige Abbildung (siehe Abb. \ref{insert_01}) wird der neue Schl\"ussel $24$ eingef\"ugt. Daher der Knoten zu gro\ss  wird, teilt er sich und der Schl\"ussel $19$ wandert in den Vaterknoten. Danach bilden sich 2 neue Knoten aus dem zu gross{}en Knoten.(siehe Abb. \ref{insert_02})
 \\[0.5in]
 \begin{figure}[h!] %[hbtp]	
 	\centering
@@ -56,22 +56,23 @@ Hierbei kann man 3 F\"alle unterscheiden.
 
 \paragraph{Verschiebung von Schl\"usseln beim L\"oschen} 
 \begin{tabular}{|l|l|}
-	\hline Nur rechter Nachbar vorhanden mit\\ $m_{rechts}> \lceil n/2\rceil -1$  & Linksverschiebung  \\ 
-	\hline Linker und rechter Nachbar vorhanden mit\\ $m_{links>}> \lceil n/2\rceil -1$ und $m_{rechts>}> \lceil n/2\rceil -1$ und $ m_{links} m_{rechts}$ & Linksverschiebung \\ 
-	\hline Linker und rechter Nachbar vorhanden mit\\ $m_{links>}> \lceil n/2\rceil -1$ und $m_{rechts>}> \lceil n/2\rceil -1$ und $ m_{links} m_{rechts}$ & Rechtsverschiebung \\ 
-	\hline nur linker Nachbar vorhanden mit\\ $m_{rechts}> \lceil n/2\rceil -1$ & Rechtsverschiebung \\ 
+	\hline \\Nur rechter Nachbar vorhanden mit\\ $m_{rechts}> \lceil n/2\rceil -1$  & Linksverschiebung  \\ 
+	\hline \\Linker und rechter Nachbar vorhanden mit\\ $m_{links>}> \lceil n/2\rceil -1$ und $m_{rechts>}> \lceil n/2\rceil -1$ und $ m_{links} m_{rechts}$ & Linksverschiebung \\ 
+	\hline \\Linker und rechter Nachbar vorhanden mit\\ $m_{links>}> \lceil n/2\rceil -1$ und $m_{rechts>}> \lceil n/2\rceil -1$ und $ m_{links} m_{rechts}$ & Rechtsverschiebung \\ 
+	\hline \\nur linker Nachbar vorhanden mit\\ $m_{rechts}> \lceil n/2\rceil -1$ & Rechtsverschiebung \\ 
 	\hline 
 \end{tabular} 
+([Schroeder:03], S. 5)
+\newpage
 \paragraph{Vereinigung von Knoten beim L\"oschen} 
 
 Vereinigung mit rechtem Nachbarn nach L\"oschen von a3(siehe Abb. \ref{loeschen_01})
 \begin{figure}[h!] %[hbtp]	
 	\centering
 	\includegraphics[width=0.7\linewidth]{images/loeschen_01}
-	\caption{}
+	\caption{([Schroeder:03], S. 6)}
 	\label{loeschen_01}
 \end{figure}
-\newpage
 \begin{itemize}
 	\item Durch das Vereinigen von Knoten wird die Zahl der Werte m im Vorg\"angerknoten um eins kleiner.
 	\item Daher kann dort wiederum ein Unterschreiten der Untergrenze stattfinden.

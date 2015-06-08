@@ -11,7 +11,7 @@
 
 \usepackage{makeidx}         	% Index
 \usepackage{multicol}        	% Zweispaltiger Index
-%\usepackage[bottom]{footmisc}	% Erzeugung von Fu�noten
+%\usepackage[bottom]{footmisc}	% Erzeugung von Fuï¿½noten
 
 %%-----------------------------------------------------
 %\newif\ifpdf
@@ -34,8 +34,8 @@
 \usepackage{color}				% Farbverwaltung
 %\usepackage{ngerman} 			% Neue deutsche Rechtsschreibung
 \usepackage[english, ngerman]{babel}
-\usepackage[latin1]{inputenc} 	% Erm�glicht Umlaute-Darstellung
-%\usepackage[utf8]{inputenc}  	% Erm�glicht Umlaute-Darstellung unter Linux (je nach verwendetem Format)
+\usepackage[latin1]{inputenc} 	% Ermï¿½glicht Umlaute-Darstellung
+%\usepackage[utf8]{inputenc}  	% Ermï¿½glicht Umlaute-Darstellung unter Linux (je nach verwendetem Format)
 
 %-----------------------------------------------------
 \usepackage{listings} 			% Code-Darstellung
@@ -93,19 +93,16 @@
 %--------------------------------------------------------------------------
 \frontmatter 
 %--------------------------------------------------------------------------
-\input{chapters/Kurzfassung} 			% Kurzfassung Deutsch/English
+%\input{chapters/Kurzfassung} 			% Kurzfassung Deutsch/English
 \tableofcontents 						% Inhaltsverzeichnis
 %--------------------------------------------------------------------------
 \mainmatter                        		% Hauptteil (ab hier arab. Seitenzahlen)
 %--------------------------------------------------------------------------
 % Die Kapitel werden in separaten .tex-Dateien abgelegt und hier eingebunden.
-%\input{chapters/EinleitungProblemstellung}
-%\input{chapters/WeitereKapitel}
-%\input{chapters/Bausteine}
-%\input{chapters/Beispiel}
-%\input{chapters/ZusammenfassungAusblick}
 %Unsere Arbeit
+\input{chapters/EinleitungProblemstellung}
 \input{chapters/Definition}
+\input{chapters/Operationen}
 \input{chapters/Komplexitaet}
 \input{chapters/Anwendung}
 % ...
@@ -117,8 +114,8 @@
 %--------------------------------------------------------------------------
 \printindex 							% Index (optional)
 %--------------------------------------------------------------------------
-\begin{appendix}						% Anh�nge sind i.d.R. optional
-   \include{chapters/Glossar}			% Glossar   
+\begin{appendix}						% Anhï¿½nge sind i.d.R. optional
+   %\include{chapters/Glossar}			% Glossar   
 \end{appendix}
 
 \end{document}
